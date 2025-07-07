@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Uwaga! Zagrożenie!</title>
+    <style type="text/css">
+        body {
+            background: #af2324;
+
+            color: #ffffff;
+            margin: 0;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .container-outer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow-x: auto;
+            padding: 15px;
+        }
+
+        .container-inner {
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            xalign-items: center;
+            xjustify-content: center;
+            -ms-flex-direction: column;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+            height: 100%;
+        }
+
+        .container { 
+            width: 100%;
+        }
+
+        @supports not (-ms-high-contrast: none) { .container { margin: auto; } }
+
+        h1 {
+            margin-bottom: .2em;
+            font-weight: bolder;
+            line-height: 1.2;
+            font-size: 1.4em;
+        }
+
+        @media (min-width:576px)  { .container { max-width: 540px; }  body { font-size: 1.0em; } h1 { font-size: 1.4em; } }
+        @media (min-width:768px)  { .container { max-width: 720px; }  body { font-size: 1.1em; } h1 { font-size: 1.6em; } }
+        @media (min-width:992px)  { .container { max-width: 960px; }  body { font-size: 1.2em; } h1 { font-size: 1.8em; } }
+        @media (min-width:1200px) { .container { max-width: 1140px; } body { font-size: 1.3em; } h1 { font-size: 2.0em; } }
+
+        a, a:hover, a:active, a:visited {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .lead {
+            font-size: 1.2em;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: .7em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding-left: 3em;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+            background: left no-repeat;
+            background-size: 2em 2em;
+        }
+
+        .top-icon {
+            height: 5em;
+            background: center left no-repeat;
+            margin-bottom: 1em;
+        }
+
+        #domain {
+            font-weight: bold;
+        }
+
+        .notice {
+            font-size: 80%;
+        }
+
+        .top-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDc0LjIgNjYuNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzQuMiA2Ni41OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MiIgeD0iMCIgZD0iTTczLjEsNTMuOEw0NC41LDQuMmMtMy4zLTUuNy0xMS40LTUuNy0xNC43LDBMMS4xLDUzLjhDLTIuMSw1OS40LDIsNjYuNSw4LjUsNjYuNWg1Ny4yCglDNzIuMiw2Ni41LDc2LjMsNTkuNCw3My4xLDUzLjh6IE0zNy4xLDU3LjljLTIsMC0zLjYtMS42LTMuNi0zLjZjMC0yLDEuNi0zLjYsMy42LTMuNmMyLDAsMy42LDEuNiwzLjYsMy42CglDNDAuNyw1Ni4zLDM5LjEsNTcuOSwzNy4xLDU3Ljl6IE00MC43LDQyLjJjMCwyLTEuNiwzLjYtMy42LDMuNmMtMiwwLTMuNi0xLjYtMy42LTMuNkwzMSwyNC4xYzAtMy4zLDIuNy02LjEsNi4xLTYuMQoJYzMuMywwLDYuMSwyLjcsNi4xLDYuMUw0MC43LDQyLjJ6Ii8+Cjwvc3ZnPgo='); }
+        .first-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDI1IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNSAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjIuOCwyMi42bC0wLjIsMC4yYy0wLjYsMC42LTEuNCwwLjYtMiwwbC02LTZjLTAuMS0wLjEtMC4xLTAuMywwLTAuNGwxLjgtMS44YzAuMS0wLjEsMC4zLTAuMSwwLjQsMGw2LDYKCQkJQzIzLjMsMjEuMiwyMy4zLDIyLjEsMjIuOCwyMi42eiIvPgoJCTxwb2x5bGluZSBjbGFzcz0ic3QwIiBwb2ludHM9IjE0LjksMTMuNSAxNi4yLDE0LjggMTQuOCwxNi4yIDEzLjUsMTQuOSAJCSIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNC4yLDRjMi44LDIuOCwyLjgsNy40LDAsMTAuMkMxMS40LDE3LDYuOCwxNyw0LDE0LjJDMS4yLDExLjQsMS4yLDYuOCw0LDRDNi44LDEuMiwxMS40LDEuMiwxNC4yLDR6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=='); }
+        .second-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDI1IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNSAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjIuNSwxMy42YzAsNS41LTQuNSwxMC0xMCwxMHMtMTAtNC41LTEwLTEwYzAtNS41LDQuNS0xMCwxMC0xMFMyMi41LDguMSwyMi41LDEzLjZ6Ii8+Cgk8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxNC44LDE3IDEyLjUsMTMuNiAxMi41LDYuOCAJIi8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOS4xLDQuMVYyLjdjMC0wLjcsMC42LTEuMywxLjMtMS4zaDQuMWMwLjcsMCwxLjMsMC42LDEuMywxLjN2MS41Ii8+CjwvZz4KPC9zdmc+Cg=='); }
+        .third-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDI1IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNSAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjIwLjEsMS44IDguNywxLjggNC45LDUuNSA0LjksMjMuMiAyMC4xLDIzLjIgCQkiLz4KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjQuOSw1LjUgOC43LDUuNSA4LjcsMS44IAkJIi8+Cgk8L2c+Cgk8Zz4KCQk8bGluZSBjbGFzcz0ic3QwIiB4MT0iNy4yIiB5MT0iOC41IiB4Mj0iMTEuMSIgeTI9IjguNSIvPgoJCTxsaW5lIGNsYXNzPSJzdDAiIHgxPSI3LjIiIHkxPSIxMS4yIiB4Mj0iMTEuMSIgeTI9IjExLjIiLz4KCQk8bGluZSBjbGFzcz0ic3QwIiB4MT0iNy4yIiB5MT0iMTMuOCIgeDI9IjE3LjgiIHkyPSIxMy44Ii8+CgkJPGxpbmUgY2xhc3M9InN0MCIgeDE9IjcuMiIgeTE9IjE2LjUiIHgyPSIxNy44IiB5Mj0iMTYuNSIvPgoJCTxsaW5lIGNsYXNzPSJzdDAiIHgxPSI2LjgiIHkxPSIxOS4yIiB4Mj0iMTcuOCIgeTI9IjE5LjIiLz4KCTwvZz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xNi4zLDYuN0MxNi4zLDYuNywxNi40LDYuNywxNi4zLDYuN0wxNi45LDZjLTAuMS0wLjEtMC4yLTAuMS0wLjMtMC4yTDE2LjMsNi43eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMi45LDcuN2wwLjksMC4xYzAuMi0wLjcsMC44LTEuMiwxLjUtMS4zbDAuMy0wLjljLTAuMSwwLTAuMSwwLTAuMiwwQzE0LjMsNS42LDEzLjIsNi41LDEyLjksNy43eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMi45LDguN2MwLjIsMS4xLDEsMS45LDIuMSwyLjFsMC0xYy0wLjYtMC4yLTEtMC42LTEuMS0xLjJMMTIuOSw4Ljd6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE2LDkuOWwwLjEsMC45YzEuMi0wLjIsMi4xLTEuMywyLjEtMi42YzAtMC42LTAuMi0xLjEtMC41LTEuNUwxNyw3LjRjMC4xLDAuMywwLjIsMC41LDAuMiwwLjgKCQkJQzE3LjMsOSwxNi43LDkuNywxNiw5Ljl6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=='); }
+        .fourth-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDI1IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNSAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUuMiwxNi4xYy0wLjEsMC42LTAuNSwxLjItMS45LDEuMkg5LjVjLTAuMiwwLTAuMywwLjEtMC40LDAuMkw2LDIwLjd2LTIuOGMwLTAuMy0wLjMtMC42LTAuNi0wLjZIMi41CgkJYy0wLjcsMC0xLjItMC41LTEuMi0xLjJWOC40YzAtMC43LDAuNS0xLjIsMS4yLTEuMmg1LjggTTIzLjcsMTMuOGMwLDAuNS0wLjQsMS0xLDFoLTMuMmMtMC4zLDAtMC42LDAuMy0wLjYsMC42djIuOWwtMy4yLTMuMwoJCWMtMC4xLTAuMS0wLjMtMC4yLTAuNC0wLjJoLTQuN2MtMC41LDAtMS0wLjQtMS0xVjUuM2MwLTAuNSwwLjQtMSwxLTFoMTIuMmMwLjUsMCwxLDAuNCwxLDFWMTMuOHoiLz4KCTxsaW5lIGNsYXNzPSJzdDAiIHgxPSIyMS4zIiB5MT0iNy45IiB4Mj0iMTEuOSIgeTI9IjcuOSIvPgoJPGxpbmUgY2xhc3M9InN0MCIgeDE9IjExLjkiIHkxPSIxMS4yIiB4Mj0iMTUuNiIgeTI9IjExLjIiLz4KPC9nPgo8L3N2Zz4K'); }
+        .fifth-icon { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJJc29sYXRpb25fTW9kZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IgoJIHk9IjBweCIgdmlld0JveD0iMCAwIDI1IDI1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNSAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZmlsbDojRkZGRkZGO30KCS5zdDN7ZmlsbDojQ0MyOTMxO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYsMTUuN2MtMC45LDAuOS0yLDEuMy0zLjMsMS4zYy0xLjMsMC0yLjQtMC41LTMuMi0xLjNjLTAuOS0wLjktMS40LTItMS40LTMuMmMwLTEuMywwLjUtMi40LDEuNC0zLjIKCQljMC45LTAuOSwyLTEuMywzLjItMS4zYzEuMywwLDIuNCwwLjUsMy4zLDEuM2MwLjksMC45LDEuMywyLDEuMywzLjJDMTcuMywxMy44LDE2LjksMTQuOSwxNiwxNS43eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE3LjMsNy45VjE3YzAsMi4yLDMsMy40LDQuNCwwLjdjMC44LTEuNiwxLjQtMy4zLDEuNC01LjJjMC0yLjgtMS01LjMtMy03LjNjLTItMi00LjUtMy03LjMtMwoJCWMtMi45LDAtNS4zLDEtNy4zLDNjLTIsMi0zLDQuNS0zLDcuM2MwLDIuOCwxLDUuMywzLDcuM2MyLDIsNC41LDMsNy4zLDNjMS4xLDAsMi4xLTAuMSwzLTAuNCIvPgo8L2c+Cjwvc3ZnPgo='); }
+    </style>
+</head>
+<body>
+    <div class="container-outer">
+        <div class="container-inner">
+            <div class="container">
+                <div class="top-icon"></div>
+                <h1>Uwaga! Ta strona stanowi zagrożenie</h1>
+                <p class="lead">Może ona wyłudzać dane osobowe, dane uwierzytelniające do kont bankowych lub serwisów społecznościowych. W trosce o Twoje bezpieczeństwo dostawca internetu powstrzymał próbę ataku poprzez <span id="placeholder">tę stronę</span>.
+                </p>
+                <p>Przypominamy:</p>
+                <ul>
+                    <li class="first-icon"><strong>Dokładnie sprawdzaj</strong> adres i wygląd strony, na której podajesz dane logowania, dane osobowe czy karty płatniczej.</li>
+                    <li class="second-icon"><strong>Nie działaj pod presją czasu</strong>, uważaj na wszelkie wiadomości, które skłaniają do działania natychmiast.</li>
+                    <li class="third-icon"><strong>Weryfikuj źródło</strong> informacji zanim podejmiesz działania na jej podstawie lub ją powielisz.</li>
+                    <li class="fourth-icon">Nie jesteś pewien czy dana wiadomość jest prawdziwa? <strong>Skontaktuj się</strong> z rzekomym nadawcą innym znanym kanałem i/lub poszukaj
+                        potwierdzenia informacji w innych źródłach.</li>
+                    <li class="fifth-icon"><strong>Zgłaszaj do CERT Polska</strong> każdą podejrzaną stronę, a także wiadomości email i SMS-y, które mogą wyłudzać dane. Formularz
+                        znajdziesz na stronie <a href="https://incydent.cert.pl">https://incydent.cert.pl</a>. Podejrzane SMS-y możesz przekierować na numer <a href="sms:8080">8080</a> (SMS bezpłatny. Koszt wysyłki w roamingu zgodny z cennikiem operatora).</li>
+                </ul>
+                <p class="notice">Lista ostrzeżeń zawierająca wykaz witryn stanowiących zagrożenie znajduje się na stronie <a href="https://cert.pl/lista-ostrzezen/">https://cert.pl/lista-ostrzezen/</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var hostname = window.location.hostname;
+
+        var isPreview = /(^.*\.|^)cert.pl$/.test(hostname);
+        var isIP = /^\d+\.\d+\.\d+\.\d+$/.test(hostname);
+
+        if (!isPreview && !isIP) {
+            document.getElementById('placeholder').outerHTML = 'stronę <span id="domain">' + window.location.hostname + '</span>';
+        }
+    </script>
+</body>
+</html>
